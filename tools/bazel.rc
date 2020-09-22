@@ -1,0 +1,13 @@
+build --distinct_host_configuration=false
+build --build_tag_filters=-nobuild
+build --javabase=@bazel_tools//tools/jdk:host_jdk
+
+## Settings for CI systems (e.g. jenkins)
+
+# Show error messages instead of pointing to the file containing them
+test:ci --test_output=errors
+# Omit tests with this tag
+test:ci --test_tag_filters=-notonci
+build:ci --build_tag_filters=-notonci
+# Report all test failures, instead of fail-fast
+build:ci --keep_going

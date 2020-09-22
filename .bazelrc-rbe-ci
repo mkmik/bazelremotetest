@@ -1,0 +1,14 @@
+build:ci-remote --config=remote
+
+# Avoid downloading output files for cached actions, since we won't use any of the resulting artifacts
+build:ci-remote --remote_download_minimal
+
+# Sometimes the RBE enviroment is broken or there are networking problems
+# this flag allows bazel to continue the build locally.
+#
+# This is not always 100% safe (see https://github.com/bazelbuild/bazel/issues/7202)
+# since this will cause also to upload local results to the remote cache and it's possible
+# that the local environment is slightly different from the remote (ubuntu docker image based) env.
+# hence we disable this behaviour
+build:ci-remote --remote_local_fallback
+build:ci-remote --noremote_upload_local_results

@@ -1,0 +1,10 @@
+# (since that version changed the paths of the bazel config files)
+# move bazelrc here once all clients have upgraded past 0.18.0
+import %workspace%/tools/bazel.rc
+
+# remote build execution and cache on internal RBE cluster
+import %workspace%/.bazelrc-rbe
+import %workspace%/.bazelrc-rbe-ci
+
+# Put user-specific options in .bazelrc.user
+try-import %workspace%/.bazelrc.user
