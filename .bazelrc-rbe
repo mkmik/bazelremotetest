@@ -19,7 +19,7 @@ build:rbe-ubuntu16-04 --host_cpu=k8
 build:rbe-ubuntu16-04 --action_env=DUMMY_ENV_TO_FLUSH_CACHE=42
 
 # Bitnami specific settings
-build:remote-bitnami-int --remote_executor=grpcs://rbe.k.int.bitnami.net:443
+build:remote-bitnami-int --remote_executor=grpcs://rbe.nami.run:443
 build:remote-bitnami-int --remote_instance_name=remote-execution
 
 build:remote-bitnami-int-ubuntu16-04 --config=remote-bitnami-int
