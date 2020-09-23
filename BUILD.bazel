@@ -1,12 +1,8 @@
+load("rules.bzl", "genrules")
+
 cc_binary(
     name = "spin",
     srcs = ["spin.c"],
 )
 
-genrule(
-    name = "done",
-    outs = [":done.txt"],
-    cmd = "$(location :spin) 480 >$(location :done.txt) 123",
-    srcs = ["data.txt"],
-    tools = [":spin"],
-)
+genrules()
