@@ -6,7 +6,7 @@ cc_binary(
 genrule(
     name = "done",
     outs = [":done.txt"],
-    cmd = "$(location :spin) 60 >$(location :done.txt) 123",
+    cmd = "$(location :spin) 480 >$(location :done.txt) 123",
     srcs = ["data.txt"],
     tools = [":spin"],
 )
