@@ -1,5 +1,5 @@
 def genrules():
-    for i in range(1, 16):
+    for i in range(1, 32):
         native.genrule(
             name = "done-%d" % (i,),
             srcs = ["data.txt", "duration.txt"],
