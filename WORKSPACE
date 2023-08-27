@@ -6,11 +6,11 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file"
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "1caf8584434d3e31be674067996be787cfa511fda2a0f05811131b588886477f",
-    strip_prefix = "bazel-toolchains-3.7.2",
+    sha256 = "ef30f61a17ac7f11a121e90818f85faa7ad27a99b6665bd59201afe17eca5182",
+    strip_prefix = "bazel-toolchains-5124557",
     urls = [
-        "https://github.com/bazelbuild/bazel-toolchains/releases/download/3.7.2/bazel-toolchains-3.7.2.tar.gz",
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/releases/download/3.7.2/bazel-toolchains-3.7.2.tar.gz",
+        "https://github.com/bazelbuild/bazel-toolchains/releases/download/5124557/bazel-toolchains-5124557.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/releases/download/5124557/bazel-toolchains-5124557.tar.gz",
     ],
 )
 
